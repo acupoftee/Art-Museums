@@ -1,0 +1,11 @@
+{
+  "name": "artmuseums",
+  "version": "1.0.0",
+  "description": "d3 geo visualization of art museum photos",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "bethy diakabana",
+  "license": "MIT"
+}
