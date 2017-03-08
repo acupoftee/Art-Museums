@@ -62,3 +62,41 @@ Map.prototype.step = function(position, callback) {
         .each("end", callback)
 }
 
+/**
+ * Adds markers for geotagged instagram posts
+ */
+Map.prototype.drawMarker = function(position) {
+    var circle = this.projection(position);
+
+    this.svg.append("circle")
+        .attr("cx", circle[0])
+        .attr("cy", circle[1])
+    
+    //TODO: color should depend on continent
+    d3.selectAll("circle")
+        .style("opacity", 1)
+        .attr("r", "0px")
+        .transition()
+        .duration(1500)
+        .ease("linear")
+        .attr("r", "200px")
+        .attr("stroke", "#f2f2f2")
+        .attr("stroke-width", "3px")
+        .attr("fill", "none")
+        .style("opacity", 0);
+    
+    this.svg.append("text")
+        .attr("x", circle[0])
+        .attr("y", circle[1])
+        .attr("fill", "#d7d7d7")
+        .attr("dy", "1em")
+}
+
+/**
+ * Removes markers for a new search
+ */
+Map.prototype.removeMarker = function() {
+    var circle = $("circle");
+    $(circle).remove();
+    $("location-display").addClass("hidden");
+}
