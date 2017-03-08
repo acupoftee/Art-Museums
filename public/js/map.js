@@ -100,3 +100,20 @@ Map.prototype.removeMarker = function() {
     $(circle).remove();
     $("location-display").addClass("hidden");
 }
+
+/**
+ * Adds geotagged photo to map
+ */
+Map.prototype.addPicture = function(pictureUrl, postUrl) {
+    var container = "<div><a href='" + postUrl + "' target='_blank'>" + "<img src='" + pictureUrl + "'/></a></div>";
+    $("#posts-container").fadeOut("slow", function() {
+        $(this).html(container).fadeIn("slow")
+    });
+}
+
+/**
+ * Adds new photo caption
+ */
+Map.prototype.replaceCaption = function(caption) {
+    $("#captions-container").text(caption);
+}
