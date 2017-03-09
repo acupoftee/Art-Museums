@@ -120,7 +120,6 @@ Map.prototype.replaceCaption = function(caption) {
 
 /**
  * Converts coordinates to a location string
- * AIzaSyDLN3yiwXruvTcF4-CM4sCtP0Z6PSkC8Js
  */
 Map.prototype.getLocation = function(position) {
   var self = this;
@@ -135,11 +134,17 @@ Map.prototype.getLocation = function(position) {
   });
 }
 
+/**
+ * Shows location data
+ */
 Map.prototype.showLocationText = function(text) {
   $("#location-display").text(text);
   $("#location-display").removeClass("hidden");
 }
 
+/**
+ * returns the string representation of the location data
+ */
 Map.prototype.parseLocation = function(results) {
   var self = this;
   var locationComponents = [];
