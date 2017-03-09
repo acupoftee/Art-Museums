@@ -1,5 +1,5 @@
 # Art Museums
-D3.js globe visualizing geotagged instagram photos of people at different museums around the world (Project for Data Visualizations)
+D3.js globe visualizing geotagged instagram photos of art museums around the world (Project for Data Visualizations)
 
 ## Use Cases
 1. Select from a list of some of the worlds most popular art museums to explore.
