@@ -30,7 +30,7 @@ function Map(opts) {
  */
 Map.prototype.render = function() {
     var self = this;
-    d3.json("/world-110m.json", function(error, world) {
+    d3.json("/world-50m.json", function(error, world) {
         self.land = topojson.feature(world, world.objects.land),
         self.svgLand = self.svg.append("path").datum(self.land).attr("d", self.path);
     });
