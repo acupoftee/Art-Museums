@@ -19,8 +19,8 @@ function Map(opts) {
     // make the globe a full sized one
     // using svg so that we don't have to redraw the map 
     // everytime it rotates
-    self.svg = d3.select("#instagram-map").append("svg")
-      .attr("fill", "#4796a5")
+    self.svg = d3.select("#map-div").append("svg")
+      .attr("fill", "#34495e") //#4796a5
       .attr("width", self.width)
       .attr("height", self.height)
 }
