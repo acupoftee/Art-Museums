@@ -32,3 +32,35 @@ router.post('/callback', function(req, res) {
     res.end();
 });
 
+router.post('/subscribe', function(req, res) {
+    var hashTag = req.body.hash_tag;
+
+    instagram.findRecentByHashtag(hashTag, function(error, results) {
+        if (error || results.length === 0) {
+            res.status(400).send('The hashtag you entered cannot be viewed. Try a different hastag.'); 
+        } else {
+            var locationPictures = instagram.filterLocationPictures(results);
+            if (locationPictures.length === 0) {
+                res.status(400).send("Couldn't find any pictures with locations for your hashtag. Try a different hashtag.");
+            } else {
+                instagram.suscribeByHashtag(hashTag);
+                res.send(locationPictures);
+            }
+        }
+    });
+});
+
+router.get('/health_check', function(req, res) {
+    var io = req.app.get('io');
+    var connectedClients = socket.findClients(io);
+    instagram.getStatus(function(error, results) {
+        if (error) {
+            error.connectedClients = connectedClients;
+            res.status(400).send(error);
+        } else {
+            result.connectedClients = connectedClients;
+            res.send(result);
+        }
+    })
+})
+module.exports = router;
