@@ -13,4 +13,4 @@ I came across an article showing the [most Instagrammed Museums of 2016](https:/
 
 2. Zoom in and select data points plotted around the globe to view the Instagram photo and caption.
 
-3. See the globe update in real time
+3. See the globe update in real time.
