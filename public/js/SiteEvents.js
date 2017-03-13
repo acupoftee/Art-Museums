@@ -28,7 +28,7 @@ var SiteEvents = {
         this.hideSearchForm();
         this.showMap();
         this.resetSecondSearchForm();
-        this.showHashTagQuerired();
+        this.showHashTagQuerired(hashTag);
         this.setDocumentTitle(hashTag);
     },
 

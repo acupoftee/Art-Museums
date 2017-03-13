@@ -1,9 +1,10 @@
 {
     "instagram" : {
         "client_id": "8fd1a2c5d54c43c1962747ce0ba495af",
-        "client_secret": "26f4ae77c99d46c99b11d92530d3d0c9"
+        "client_secret": "26f4ae77c99d46c99b11d92530d3d0c9",
+        "access_token": "4612177993.8fd1a2c.5ce66b63b1a143de834ccd999377b44e"
     },
-    "root_url": "https://localhost:8080"
+    "root_url": "https://localhost:3000"
 }
 
 //AIzaSyDLN3yiwXruvTcF4-CM4sCtP0Z6PSkC8Js

@@ -15,6 +15,7 @@
     "d3": "^4.7.1",
     "express": "^4.15.2",
     "express-session": "^1.15.1",
+    "express-sslify": "^1.2.0",
     "geocoder": "^0.2.2",
     "http": "0.0.0",
     "instagram-node-lib": "^0.1.1",
@@ -26,6 +27,7 @@
     "querystring": "^0.2.0",
     "request": "^2.80.0",
     "socket.io": "^1.7.3",
-    "topojson": "^2.2.0"
+    "topojson": "^2.2.0",
+    "twitter": "^1.7.0"
   }
 }
